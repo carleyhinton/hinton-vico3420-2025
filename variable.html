@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Number Generator</title>
+
+</head>
+<body>
+    
+    <script>
+        alert("Let's figure out your lucky number(s)!");
+
+        let num1 = Number(prompt("What day were you born"));
+        let num2 = Number(prompt("How old are you?"));
+        let num3 = Number(prompt("What year were you born?"));
+        
+        alert("Check your answer: \nDay of birth: " + num1 + "\nAge: " + num2 + "\nYear of birth: " + num3);
+        
+        num1 = num1 + 5;  
+        num2 = num2 - 1;  
+        num3 = num3 + 10; 
+        
+        alert("Lucky Numbers: \nFirst: " + num1 + "\nSecond: " + num2 + "\nThird: " + num3);
+        
+        let concatenatedResult = "Remember Lucky number: " + num1 + " and Remember Lucky Number: " + num2;
+        alert("Lucky Numbers coming up: " + concatenatedResult);
+
+        let total = num1 - num2 + num3; 
+        let multiplication = num2 * 0;  
+        let division = num3 / 10;      
+
+        
+        alert("Most lucky number is: " + total + multiplication + division);
+
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Carley the right age for College</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        
+        let age = 19;
+        let name = "Carley";
+        let isinCollege = true;
+
+        if (isinCollege) {
+            document.getElementById("result").innerHTML += name + " is in College.<br>";
+        }
+        if (age >= 18) {
+            document.getElementById("result").innerHTML += name + " is an adult.<br>";
+        } else {
+            document.getElementById("result").innerHTML += name + " is a minor.<br>";
+        }
+        if (age < 13) {
+            document.getElementById("result").innerHTML += name + " is a child.<br>";
+        } else if (age >= 13 && age < 18) {
+            document.getElementById("result").innerHTML += name + " is a teenager.<br>";
+        } else {
+            document.getElementById("result").innerHTML += name + " is an adult.<br>";
+        }
+    </script> 
+</body>
+</html>

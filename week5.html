@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends LinkedIns</title>
+</head>
+<body>
+
+    <div id="content"></div>
+
+    <script>
+
+        let menuItems = [
+            ["https://www.linkedin.com/in/ella-huelskamp-1442272b9/", "Ella"],
+            ["https://www.linkedin.com/in/julia-parente-/", "Julia"],
+            ["https://www.linkedin.com/in/audree-howell-1468a229b/", "Audree"],
+            ["https://www.linkedin.com/in/carley-hinton-6555482a5/","Carley"],
+            ["https://www.linkedin.com/in/gwyneth-shoemaker-141498293/","Gwyn"]
+        ]
+        let contentDiv = document.getElementById("content");
+
+        for (let i = 0; i < menuItems.length; i++) {
+  let item = menuItems[i];  // Get each menu item (which is an array).
+  let url = item[0];  // The URL.
+  let text = item[1];
+  
+  let anchor = document.createElement("a");
+            anchor.href = url;  // Set the href attribute to the URL.
+            anchor.textContent = text;
+            
+            contentDiv.appendChild(anchor);
+
+            contentDiv.appendChild(document.createElement("br"));
+        }
+
+    </script>
+    
+</body>
+</html>

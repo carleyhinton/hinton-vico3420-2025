@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Social Media Post Request</title>
 </head>
+<script>
+    function handleFormSubmit(event) {
+            event.preventDefault(); // Prevents the form from being submitted to the server
+
+            // Show an alert saying the form has been submitted
+            alert("Form has been submitted successfully!");
+    }
+ window.onload = function() {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', handleFormSubmit);
+ }
+</script>
 <body>
     <form id="contactForm" action="" method="get">
         <div class="formField">
@@ -15,6 +27,36 @@
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName">
         </div>
+        <div class="formField">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="ex: 555-555-5555">
+        </div>
+        <div class="formField">
+            <label>Post type: </label>
+            <input type="radio" id="reel" name="postType" value="reel"> 
+            <label for="reel">Reel</label>
+            <input type="radio" id="post" name="postType" value="post"> 
+            <label for="post">Post</label>
+            <input type="radio" id="story" name="postType" value="story"> 
+            <label for="story">Story</label>
+        </div>
+        <div class="formField">
+            <label for="canPost">Check box if you want us to send you a draft before posting: </label>
+            <input type="checkbox" id="canPost" name="canPost">
+        </div>
+        <div class="formField">
+            <label for="textSize">Choose your platform:</label>
+            <select id="textSize" name="textSize">
+                <option value="instagram">Instagram</option>
+                <option value="tiktok">Tiktok</option>
+                <option value="twitter">Twitter</option>
+            </select>
+        </div>
+        <div class="formField">
+            <label for="appointmentDate">When would you like it to be posted? </label>
+            <input type="date" id="appointmentDate" name="appointmentDate">
+        </div>
+        <button type="submit" value="submit" id="submitButton">Submit</button>
     </form>
 </body>
 </html>

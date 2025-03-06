@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Fridge From Top to Bottom</h1>
+
+    <div id="output"></div> 
+
+ <script>
+          let myArray = ["apple", "banana", "cherry"];
+        let output = document.getElementById("output");
+        output.innerHTML += "<p><strong>Top Shelf:</strong> " + JSON.stringify(myArray) + "</p>";
+
+        
+        myArray.push("date", "elderberry", "fig");
+        output.innerHTML += "<p><strong>Second Shelf:</strong> " + JSON.stringify(myArray) + "</p>";
+
+        
+        myArray.sort();
+        output.innerHTML += "<p><strong>First Two Shelves:</strong> " + JSON.stringify(myArray) + "</p>";
+
+        
+        myArray.splice(2, 1); 
+        output.innerHTML += "<p><strong>Had A Snack of Cherries:</strong> " + JSON.stringify(myArray) + "</p>";
+
+    
+        output.innerHTML += "<p><strong>The Best Thing In My Fridge:</strong> " + myArray[1] + "</p>";
+
+   
+        let shiftedItem = myArray.shift(); 
+        output.innerHTML += "<p><strong>Had Another Snack:</strong> " + JSON.stringify(myArray) + "</p>";
+        output.innerHTML += "<p><strong>What I Ate:</strong> " + shiftedItem + "</p>";
+
+        myArray.unshift("apricot"); 
+        output.innerHTML += "<p><strong>Went Shopping:</strong> " + JSON.stringify(myArray) + "</p>";
+ </script>   
+</body>
+</html>
